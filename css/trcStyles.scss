@@ -19,6 +19,16 @@
     .table {
         margin: 20px 0 40px 0;
 
+        &#trc-results-summary {
+            thead { 
+                tr {
+                    >th.dark-cell {
+                        background: #505050;
+                    }
+                }
+            }
+        }
+
         &#trc-passage-details {
             tr {
                 >td {
