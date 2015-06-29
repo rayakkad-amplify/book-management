@@ -2,10 +2,12 @@
   border-bottom: 1px solid #eee; }
 .ui-toolkit #student-name {
   float: right; }
-.ui-toolkit table {
-  margin-top: 20px; }
-  .ui-toolkit table#trc-passage-details tr > td {
+.ui-toolkit .table {
+  margin: 20px 0 40px 0; }
+  .ui-toolkit .table#trc-passage-details tr > td {
     font-family: "open-sans-semi-bold", Arial, sans-serif; }
-    .ui-toolkit table#trc-passage-details tr > td span {
+    .ui-toolkit .table#trc-passage-details tr > td span {
       float: right;
       font-family: "open-sans-semi-regular", Arial, sans-serif; }
+  .ui-toolkit .table#trc-accordion-row-table {
+    margin: 0 0 40px 0; }
