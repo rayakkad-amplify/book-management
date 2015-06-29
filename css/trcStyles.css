@@ -11,6 +11,8 @@
   margin: 20px 0 40px 0; }
   .ui-toolkit .table#trc-results-summary thead tr > th.dark-cell {
     background: #505050; }
+    .ui-toolkit .table#trc-results-summary thead tr > th.dark-cell#trc-student-result {
+      font-family: "open-sans-bold", Arial, sans-serif; }
   .ui-toolkit .table#trc-passage-details tr > td {
     font-family: "open-sans-semi-bold", Arial, sans-serif; }
     .ui-toolkit .table#trc-passage-details tr > td span {
