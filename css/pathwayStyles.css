@@ -1,0 +1,85 @@
+.ui-toolkit .container {
+  position: relative; }
+.ui-toolkit .buttons-container {
+  position: relative;
+  width: inherit; }
+  .ui-toolkit .buttons-container .page-title {
+    padding: 40px 0; }
+  .ui-toolkit .buttons-container .btn-primary {
+    width: 150px; }
+.ui-toolkit #pathways-main-button {
+  left: 777px;
+  position: absolute;
+  top: 45px; }
+.ui-toolkit #pathways-button {
+  position: absolute;
+  top: 193px;
+  left: 325px;
+  font-size: 10px;
+  width: 56px;
+  padding: 4px 0; }
+.ui-toolkit .amplify-modal .alert-info {
+  border: 0;
+  border-radius: 0;
+  padding: 15px 30px;
+  margin: 0; }
+.ui-toolkit .amplify-modal .glyphicon {
+  color: #787878;
+  cursor: pointer;
+  font-size: 15px;
+  line-height: 50px;
+  position: absolute;
+  right: 50px; }
+  .ui-toolkit .amplify-modal .glyphicon:hover {
+    color: #5a5a5a; }
+.ui-toolkit .amplify-modal .table.table-bordered > tbody > tr.row-md > td.text-center {
+  padding: 12px 0; }
+.ui-toolkit .amplify-modal .table.table-bordered .performance-bar .performance-bar-area span.right-align {
+  left: auto;
+  right: 0; }
+.ui-toolkit .amplify-modal .table.table-bordered .btn-secondary {
+  text-shadow: none;
+  width: 60px; }
+.ui-toolkit .amplify-modal .table.table-bordered .btn-secondary,
+.ui-toolkit .amplify-modal .table.table-bordered .btn-quaternary {
+  padding: 4px 0; }
+.ui-toolkit .amplify-modal .table.table-bordered .performance-bar-container {
+  background: #f0f0f0;
+  height: 45px;
+  padding: 19px 30px 0 10px;
+  top: 5px;
+  width: 220px; }
+  .ui-toolkit .amplify-modal .table.table-bordered .performance-bar-container p {
+    left: 70px;
+    position: absolute;
+    top: 18px; }
+    .ui-toolkit .amplify-modal .table.table-bordered .performance-bar-container p.predicted-score {
+      left: 17px;
+      font-size: 10px;
+      top: 34px; }
+.ui-toolkit .amplify-modal .table.table-bordered .performance-bar-input {
+  position: absolute;
+  right: 10px;
+  top: 16px;
+  text-align: right;
+  width: 45px; }
+.ui-toolkit .amplify-modal .table.table-bordered .performance-bar::after {
+  display: none; }
+.ui-toolkit .amplify-modal .table.table-bordered #dibels-composite,
+.ui-toolkit .amplify-modal .table.table-bordered #lnf-score {
+  font-family: open-sans-bold, Arial, sans-serif;
+  position: absolute;
+  right: 10px;
+  text-align: center;
+  top: 18px;
+  width: 45px; }
+.ui-toolkit .amplify-modal .table.table-bordered .tooltip.fade.bottom.in {
+  pointer-events: none; }
+.ui-toolkit .amplify-modal .table.table-bordered .std-red {
+  color: #bb0b03; }
+.ui-toolkit .amplify-modal .table.table-bordered .std-yellow {
+  color: #f2d301; }
+.ui-toolkit .amplify-modal .table.table-bordered .std-green {
+  color: #6aa506; }
+.ui-toolkit .amplify-modal .table.table-bordered .white-bg {
+  background: white; }
