@@ -1,4 +1,13 @@
 .ui-toolkit {
+    .nav-tabs {
+        margin-bottom: 0;
+    }
+
+    #trc-details {
+        border-left: 1px solid #eee;
+        border-right: 1px solid #eee;
+    }
+
     .page-title {
         border-bottom: 1px solid #eee;
     }
@@ -26,6 +35,28 @@
 
         &#trc-accordion-row-table {
             margin: 0 0 40px 0;
+
+            h4 {
+                padding-bottom: 5px;
+            }
+
+            .rationale-list {
+                padding-left: 0;
+
+                li {
+                    font-weight: bold;
+                    list-style: none;
+
+                    .glyphicon {
+                        margin-right: 10px;
+                    }
+
+                    p {
+                        font-weight: normal;
+                        padding: 10px 0 20px 0;
+                    }
+                }
+            }
         }
     }
 }

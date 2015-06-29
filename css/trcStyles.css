@@ -1,3 +1,8 @@
+.ui-toolkit .nav-tabs {
+  margin-bottom: 0; }
+.ui-toolkit #trc-details {
+  border-left: 1px solid #eee;
+  border-right: 1px solid #eee; }
 .ui-toolkit .page-title {
   border-bottom: 1px solid #eee; }
 .ui-toolkit #student-name {
@@ -11,3 +16,15 @@
       font-family: "open-sans-semi-regular", Arial, sans-serif; }
   .ui-toolkit .table#trc-accordion-row-table {
     margin: 0 0 40px 0; }
+    .ui-toolkit .table#trc-accordion-row-table h4 {
+      padding-bottom: 5px; }
+    .ui-toolkit .table#trc-accordion-row-table .rationale-list {
+      padding-left: 0; }
+      .ui-toolkit .table#trc-accordion-row-table .rationale-list li {
+        font-weight: bold;
+        list-style: none; }
+        .ui-toolkit .table#trc-accordion-row-table .rationale-list li .glyphicon {
+          margin-right: 10px; }
+        .ui-toolkit .table#trc-accordion-row-table .rationale-list li p {
+          font-weight: normal;
+          padding: 10px 0 20px 0; }
