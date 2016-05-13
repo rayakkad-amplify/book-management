@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Book Management</title>
     <link rel="stylesheet" href="public/css/styles.css">
-    <link rel="stylesheet" href="css/book-management.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/t/bs/dt-1.10.11,af-2.1.1,b-1.1.2,b-colvis-1.1.2,b-print-1.1.2,cr-1.3.1,fc-3.2.1,fh-3.1.1,kt-2.1.1,r-2.0.2,rr-1.1.1,sc-1.4.1,se-1.1.2/datatables.min.css"/>
+    <link rel="stylesheet" href="css/book-management.css">
 </head>
 <body>
     <!-- Top Navigation -->
@@ -73,11 +73,10 @@
     
     <!-- TRC Details Content -->
     <div class="container" id="trc-details">
-        <div class="col-md-12 breadcrumb-col">
+        <div class="col-md-12 zero-padding-col">
             <!-- Basic inverted breadcrumb -->
             <ul class="breadcrumb breadcrumb-inverted" role="navigation">
-                <li><a href="index.html">My Book List</a>
-                </li>
+                <li><a href="index.html">My Book List</a></li>
                 <li class="active"><a href="edit-books">Edit Book List</a>
                 </li>
             </ul>
@@ -85,212 +84,274 @@
 
         <!-- Header Title -->
         <div class="col-md-12 page-title">
-            <h3>Edit Book List</h3>
-            <!-- Primary button -->
-            <a href="" class="btn btn-primary">Edit Book List</a>
+            <h3>Edit Book Lists</h3>
         </div>
 
-        <div class="col-md-12">
-            <div class="filters-container">
-                <h5 class="filters-title">Book Filters</h5>
-                <div class="filters-content">
-                    <div class="filter-options">
-                        <!-- dropdown with scroll -->
-                        <p class="dropdown-label">District</p>
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-dropdown-basic fixed-width dropdown-toggle" data-toggle="dropdown" data-value="Value 0">
-                                <span class="btn-dropdown-label">District</span>
-                                <span class="icon icon-dropdown-arrow"></span>
-                            </button>
-                            <ul class="dropdown-menu menu-basic">
-                                <li><a href="#/" data-value="Value 1">Item 1</a></li>
-                                <li><a href="#/" data-value="Value 2">Item 2</a></li>
-                                <li><a href="#/" data-value="Value 3">Item 3</a></li>
-                                <li><a href="#/" class="ellipsis" data-value="Value 4">Item 4 - Long text with ellipsis in case it overflows</a></li>
-                                <li><a href="#/" data-value="Value 5">Item 5</a></li>
-                                <li><a href="#/" data-value="Value 6">Item 6</a></li>
-                                <li><a href="#/" data-value="Value 7">Item 7</a></li>
-                                <li><a href="#/" data-value="Value 8">Item 8</a></li>
-                                <li><a href="#/" data-value="Value 9">Item 9</a></li>
-                                <li><a href="#/" data-value="Value 10">Item 10</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                        
-                    <div class="filter-options">
-                        <!-- dropdown with scroll -->
-                        <p class="dropdown-label">School</p>
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-dropdown-basic fixed-width dropdown-toggle" data-toggle="dropdown" data-value="Value 0">
-                                <span class="btn-dropdown-label">School</span>
-                                <span class="icon icon-dropdown-arrow"></span>
-                            </button>
-                            <ul class="dropdown-menu menu-basic">
-                                <li><a href="#/" data-value="Value 1">Item 1</a></li>
-                                <li><a href="#/" data-value="Value 2">Item 2</a></li>
-                                <li><a href="#/" data-value="Value 3">Item 3</a></li>
-                                <li><a href="#/" class="ellipsis" data-value="Value 4">Item 4 - Long text with ellipsis in case it overflows</a></li>
-                                <li><a href="#/" data-value="Value 5">Item 5</a></li>
-                                <li><a href="#/" data-value="Value 6">Item 6</a></li>
-                                <li><a href="#/" data-value="Value 7">Item 7</a></li>
-                                <li><a href="#/" data-value="Value 8">Item 8</a></li>
-                                <li><a href="#/" data-value="Value 9">Item 9</a></li>
-                                <li><a href="#/" data-value="Value 10">Item 10</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                        
-                    <div class="filter-options">
-                        <!-- dropdown with scroll -->
-                        <p class="dropdown-label">Level System</p>
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-dropdown-basic fixed-width dropdown-toggle" data-toggle="dropdown" data-value="Value 0">
-                                <span class="btn-dropdown-label">Guided Reading</span>
-                                <span class="icon icon-dropdown-arrow"></span>
-                            </button>
-                            <ul class="dropdown-menu menu-basic">
-                                <li><a href="#/" data-value="Value 1">Guided Reading</a></li>
-                                <li><a href="#/" data-value="Value 2">Reading Recovery</a></li>
-                            </ul>
+        <div class="col-md-12 zero-padding-col">
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#personal-list" data-toggle="tab">Personal Book Lists</a></li>
+                <li><a href="#school-list" data-toggle="tab">School Book Lists</a></li>
+                <li><a href="#district-list" data-toggle="tab">District Book Lists</a></li>
+            </ul>
+            <div id="myTabContent" class="tab-content">
+                <!-- Tab - Personal List -->
+                <div class="tab-pane fade active in" id="personal-list">
+                    <div class="col-md-12">
+                        <div class="filters-container">
+                            <h5 class="filters-title">Filters</h5>
+                            <div class="filters-content">
+                                <div class="filter-options">
+                                    <!-- dropdown with scroll -->
+                                    <p class="dropdown-label">District</p>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-dropdown-basic fixed-width dropdown-toggle" data-toggle="dropdown" data-value="Value 0">
+                                            <span class="btn-dropdown-label">District</span>
+                                            <span class="icon icon-dropdown-arrow"></span>
+                                        </button>
+                                        <ul class="dropdown-menu menu-basic">
+                                            <li><a href="#/" data-value="Value 1">Item 1</a></li>
+                                            <li><a href="#/" data-value="Value 2">Item 2</a></li>
+                                            <li><a href="#/" data-value="Value 3">Item 3</a></li>
+                                            <li><a href="#/" class="ellipsis" data-value="Value 4">Item 4 - Long text with ellipsis in case it overflows</a></li>
+                                            <li><a href="#/" data-value="Value 5">Item 5</a></li>
+                                            <li><a href="#/" data-value="Value 6">Item 6</a></li>
+                                            <li><a href="#/" data-value="Value 7">Item 7</a></li>
+                                            <li><a href="#/" data-value="Value 8">Item 8</a></li>
+                                            <li><a href="#/" data-value="Value 9">Item 9</a></li>
+                                            <li><a href="#/" data-value="Value 10">Item 10</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                    
+                                <div class="filter-options">
+                                    <!-- dropdown with scroll -->
+                                    <p class="dropdown-label">School</p>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-dropdown-basic fixed-width dropdown-toggle" data-toggle="dropdown" data-value="Value 0">
+                                            <span class="btn-dropdown-label">School</span>
+                                            <span class="icon icon-dropdown-arrow"></span>
+                                        </button>
+                                        <ul class="dropdown-menu menu-basic">
+                                            <li><a href="#/" data-value="Value 1">Item 1</a></li>
+                                            <li><a href="#/" data-value="Value 2">Item 2</a></li>
+                                            <li><a href="#/" data-value="Value 3">Item 3</a></li>
+                                            <li><a href="#/" class="ellipsis" data-value="Value 4">Item 4 - Long text with ellipsis in case it overflows</a></li>
+                                            <li><a href="#/" data-value="Value 5">Item 5</a></li>
+                                            <li><a href="#/" data-value="Value 6">Item 6</a></li>
+                                            <li><a href="#/" data-value="Value 7">Item 7</a></li>
+                                            <li><a href="#/" data-value="Value 8">Item 8</a></li>
+                                            <li><a href="#/" data-value="Value 9">Item 9</a></li>
+                                            <li><a href="#/" data-value="Value 10">Item 10</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                    
+                                <div class="filter-options">
+                                    <!-- dropdown with scroll -->
+                                    <p class="dropdown-label">Level System</p>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-dropdown-basic fixed-width dropdown-toggle" data-toggle="dropdown" data-value="Value 0">
+                                            <span class="btn-dropdown-label">Guided Reading</span>
+                                            <span class="icon icon-dropdown-arrow"></span>
+                                        </button>
+                                        <ul class="dropdown-menu menu-basic">
+                                            <li><a href="#/" data-value="Value 1">Guided Reading</a></li>
+                                            <li><a href="#/" data-value="Value 2">Reading Recovery</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- Tertiary button -->
+                                <button type="button" class="btn btn-tertiary">Filter Results</button>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Tertiary button -->
-                    <button type="button" class="btn btn-tertiary">Filter Results</button>
+                    <div class="col-md-12">
+                        <!-- Basic table with stripes -->
+                        <table class="table table-striped table-bordered" id="book-results-table" width="100%">
+                            <thead>
+                                <tr>
+                                    <th class="text-center">Add Book</th>
+                                    <th class="text-center">Level</th>
+                                    <th class="text-left">Title</th>
+                                    <th class="text-left">Publisher</th>
+                                    <th class="text-left">Series</th>
+                                    <th class="text-center">Language</th>
+                                    <th class="text-center">Type</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-center">
+                                        <input id="checkbox-1" class="regular-checkbox" type="checkbox" checked="">
+                                        <label for="checkbox-1">
+                                            <span class="icon icon-checkbox"></span>
+                                        </label>
+                                    </td>
+                                    <td class="text-center">1</td>
+                                    <td>Three Blind Mice</td>
+                                    <td class="text-left">Sundance</td>
+                                    <td class="text-left">StoryTown</td>
+                                    <td class="text-center">English</td>
+                                    <td class="text-center">Non-Fiction</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">
+                                        <input id="checkbox-2" class="regular-checkbox" type="checkbox">
+                                        <label for="checkbox-2">
+                                            <span class="icon icon-checkbox"></span>
+                                        </label>
+                                    </td>
+                                    <td class="text-center">1</td>
+                                    <td>Hanna Has A Pet</td>
+                                    <td class="text-left">Sundance</td>
+                                    <td class="text-left">StoryTown</td>
+                                    <td class="text-center">English</td>
+                                    <td class="text-center">Non-Fiction</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">
+                                        <input id="checkbox-3" class="regular-checkbox" type="checkbox">
+                                        <label for="checkbox-3">
+                                            <span class="icon icon-checkbox"></span>
+                                        </label>
+                                    </td>
+                                    <td class="text-center">1</td>
+                                    <td>Fritty Frattzy Foo</td>
+                                    <td class="text-left">Sundance</td>
+                                    <td class="text-left">StoryTown</td>
+                                    <td class="text-center">English</td>
+                                    <td class="text-center">Non-Fiction</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">
+                                        <input id="checkbox-4" class="regular-checkbox" type="checkbox">
+                                        <label for="checkbox-4">
+                                            <span class="icon icon-checkbox"></span>
+                                        </label>
+                                    </td>
+                                    <td class="text-center">1</td>
+                                    <td>Nice Mice</td>
+                                    <td class="text-left">Sundance</td>
+                                    <td class="text-left">StoryTown</td>
+                                    <td class="text-center">English</td>
+                                    <td class="text-center">Non-Fiction</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">
+                                        <input id="checkbox-5" class="regular-checkbox" type="checkbox">
+                                        <label for="checkbox-5">
+                                            <span class="icon icon-checkbox"></span>
+                                        </label>
+                                    </td>
+                                    <td class="text-center">1</td>
+                                    <td>Jane Goodhall</td>
+                                    <td class="text-left">Sundance</td>
+                                    <td class="text-left">StoryTown</td>
+                                    <td class="text-center">English</td>
+                                    <td class="text-center">Non-Fiction</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">
+                                        <input id="checkbox-6" class="regular-checkbox" type="checkbox">
+                                        <label for="checkbox-6">
+                                            <span class="icon icon-checkbox"></span>
+                                        </label>
+                                    </td>
+                                    <td class="text-center">1</td>
+                                    <td>We Go To The Zoo</td>
+                                    <td class="text-left">Sundance</td>
+                                    <td class="text-left">StoryTown</td>
+                                    <td class="text-center">English</td>
+                                    <td class="text-center">Non-Fiction</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">
+                                        <input id="checkbox-7" class="regular-checkbox" type="checkbox">
+                                        <label for="checkbox-7">
+                                            <span class="icon icon-checkbox"></span>
+                                        </label>
+                                    </td>
+                                    <td class="text-center">1</td>
+                                    <td>Seasons</td>
+                                    <td class="text-left">Sundance</td>
+                                    <td class="text-left">StoryTown</td>
+                                    <td class="text-center">English</td>
+                                    <td class="text-center">Non-Fiction</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">
+                                        <input id="checkbox-8" class="regular-checkbox" type="checkbox">
+                                        <label for="checkbox-8">
+                                            <span class="icon icon-checkbox"></span>
+                                        </label>
+                                    </td>
+                                    <td class="text-center">1</td>
+                                    <td>Celebrating America</td>
+                                    <td class="text-left">Sundance</td>
+                                    <td class="text-left">StoryTown</td>
+                                    <td class="text-center">English</td>
+                                    <td class="text-center">Non-Fiction</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">
+                                        <input id="checkbox-9" class="regular-checkbox" type="checkbox">
+                                        <label for="checkbox-9">
+                                            <span class="icon icon-checkbox"></span>
+                                        </label>
+                                    </td>
+                                    <td class="text-center">1</td>
+                                    <td>The Life Of Abraham Linclon</td>
+                                    <td class="text-left">Sundance</td>
+                                    <td class="text-left">StoryTown</td>
+                                    <td class="text-center">English</td>
+                                    <td class="text-center">Non-Fiction</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">
+                                        <input id="checkbox-10" class="regular-checkbox" type="checkbox">
+                                        <label for="checkbox-10">
+                                            <span class="icon icon-checkbox"></span>
+                                        </label>
+                                    </td>
+                                    <td class="text-center">1</td>
+                                    <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                                    <td class="text-left">Sundance</td>
+                                    <td class="text-left">StoryTown</td>
+                                    <td class="text-center">English</td>
+                                    <td class="text-center">Non-Fiction</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">
+                                        <input id="checkbox-11" class="regular-checkbox" type="checkbox">
+                                        <label for="checkbox-11">
+                                            <span class="icon icon-checkbox"></span>
+                                        </label>
+                                    </td>
+                                    <td class="text-center">1</td>
+                                    <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                                    <td class="text-left">Sundance</td>
+                                    <td class="text-left">StoryTown</td>
+                                    <td class="text-center">English</td>
+                                    <td class="text-center">Non-Fiction</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div> <!-- Tab - Personal List -->
+                <div class="tab-pane fade" id="school-list">
+                    
+                </div>
+                <div class="tab-pane fade" id="district-list">
+                    
                 </div>
             </div>
         </div>
         
-        <div class="col-md-12">
-            <!-- Basic table with stripes -->
-            <table class="table table-striped" id="basic-table-striped" width="100%">
-                <thead>
-                    <tr>
-                        <th class="text-left">Level</th>
-                        <th class="text-left">Title</th>
-                        <th class="text-left">Publisher</th>
-                        <th class="text-left">Series</th>
-                        <th class="text-center">Language</th>
-                        <th class="text-center">Type</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
-                        <td class="text-left">Sundance</td>
-                        <td class="text-left">StoryTown</td>
-                        <td class="text-center">English</td>
-                        <td class="text-center">Non-Fiction</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
-                        <td class="text-left">Sundance</td>
-                        <td class="text-left">StoryTown</td>
-                        <td class="text-center">English</td>
-                        <td class="text-center">Non-Fiction</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
-                        <td class="text-left">Sundance</td>
-                        <td class="text-left">StoryTown</td>
-                        <td class="text-center">English</td>
-                        <td class="text-center">Non-Fiction</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
-                        <td class="text-left">Sundance</td>
-                        <td class="text-left">StoryTown</td>
-                        <td class="text-center">English</td>
-                        <td class="text-center">Non-Fiction</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
-                        <td class="text-left">Sundance</td>
-                        <td class="text-left">StoryTown</td>
-                        <td class="text-center">English</td>
-                        <td class="text-center">Non-Fiction</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
-                        <td class="text-left">Sundance</td>
-                        <td class="text-left">StoryTown</td>
-                        <td class="text-center">English</td>
-                        <td class="text-center">Non-Fiction</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
-                        <td class="text-left">Sundance</td>
-                        <td class="text-left">StoryTown</td>
-                        <td class="text-center">English</td>
-                        <td class="text-center">Non-Fiction</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
-                        <td class="text-left">Sundance</td>
-                        <td class="text-left">StoryTown</td>
-                        <td class="text-center">English</td>
-                        <td class="text-center">Non-Fiction</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
-                        <td class="text-left">Sundance</td>
-                        <td class="text-left">StoryTown</td>
-                        <td class="text-center">English</td>
-                        <td class="text-center">Non-Fiction</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
-                        <td class="text-left">Sundance</td>
-                        <td class="text-left">StoryTown</td>
-                        <td class="text-center">English</td>
-                        <td class="text-center">Non-Fiction</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
-                        <td class="text-left">Sundance</td>
-                        <td class="text-left">StoryTown</td>
-                        <td class="text-center">English</td>
-                        <td class="text-center">Non-Fiction</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
-                        <td class="text-left">Sundance</td>
-                        <td class="text-left">StoryTown</td>
-                        <td class="text-center">English</td>
-                        <td class="text-center">Non-Fiction</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
-                        <td class="text-left">Sundance</td>
-                        <td class="text-left">StoryTown</td>
-                        <td class="text-center">English</td>
-                        <td class="text-center">Non-Fiction</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
-                        <td class="text-left">Sundance</td>
-                        <td class="text-left">StoryTown</td>
-                        <td class="text-center">English</td>
-                        <td class="text-center">Non-Fiction</td>
-                    </tr>
-                    
-                </tbody>
-            </table>
-        </div>
+        
 
     </div> <!-- container -->
     
@@ -299,18 +360,31 @@
         <span>© 2014 – 2015 Amplify Education, Inc. All rights reserved.</span>
     </div>
     <script src="public/js/vendor/jquery/jquery.js"></script>
-    <script src="public/js/vendor/d3/d3.min.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/t/bs/dt-1.10.11,af-2.1.1,b-1.1.2,b-colvis-1.1.2,b-print-1.1.2,cr-1.3.1,fc-3.2.1,fh-3.1.1,kt-2.1.1,r-2.0.2,rr-1.1.1,sc-1.4.1,se-1.1.2/datatables.min.js"></script>
+    <script src="public/js/vendor/d3/d3.min.js" charset="utf-8"></script>
+    <script src="public/js/vendor/bootstrap/collapse.js"></script>
+    <script src="public/js/vendor/bootstrap/affix.js"></script>
+    <script src="public/js/vendor/bootstrap/alert.js"></script>
+    <script src="public/js/vendor/bootstrap/button.js"></script>
+    <script src="public/js/vendor/bootstrap/carousel.js"></script>
+    <script src="public/js/vendor/bootstrap/dropdown.js"></script>
     <script src="public/js/vendor/bootstrap/modal.js"></script>
+    <script src="public/js/vendor/bootstrap/scrollspy.js"></script>
+    <script src="public/js/vendor/bootstrap/tab.js"></script>
+    <script src="public/js/vendor/bootstrap/tooltip.js"></script>
+    <script src="public/js/vendor/bootstrap/popover.js"></script>
     <script src="public/js/vendor/bootstrap/transition.js"></script>
     <script src="public/js/vendor/bootstrap/collapse.js"></script>
-    <script src="public/js/vendor/bootstrap/dropdown.js"></script>
-    <script src="public/js/vendor/bootstrap/tooltip.js"></script>
-    <script src="public/js/amplify/amplify-notes-widget.js"></script>
-    <script src="public/js/amplify/amplify-utilities.js"></script>
-    <script src="public/js/amplify/amplify-performance-bar.js"></script>
-    <script src="public/js/amplify/amplify-accordion-table-rows.js"></script>
+    <script src="public/js/vendor/bootstrap-growl/jquery.bootstrap-growl.js"></script>
     <script src="public/js/amplify/amplify-dropdown.js"></script>
+    <script src="public/js/amplify/amplify-performance-bar.js"></script>
+    <script src="public/js/amplify/amplify-windlines.js"></script>
+    <script src="public/js/amplify/amplify-notes-widget.js"></script>
+    <script src="public/js/amplify/amplify-accordion-table-rows.js"></script>
+    <script src="public/js/amplify/amplify-utilities.js"></script>
+    <script src="public/js/amplify-younger-user/amplify-navbar.js"></script>
+    <script src="public/js/examples/notes-widget.js"></script>
+    <script src="public/js/examples/performance-bar.js"></script>
     <script src="public/js/book-management/book-management.js"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/t/bs/dt-1.10.11,af-2.1.1,b-1.1.2,b-colvis-1.1.2,b-print-1.1.2,cr-1.3.1,fc-3.2.1,fh-3.1.1,kt-2.1.1,r-2.0.2,rr-1.1.1,sc-1.4.1,se-1.1.2/datatables.min.js"></script>
 </body>
 </html>

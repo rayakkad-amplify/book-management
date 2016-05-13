@@ -1,9 +1,9 @@
 .ui-toolkit .container {
   padding: 0; }
-.ui-toolkit .breadcrumb-col {
+.ui-toolkit .zero-padding-col {
   padding: 0; }
 .ui-toolkit .dataTables_wrapper {
-  margin-top: 20px; }
+  margin: 20px 0; }
 .ui-toolkit .pagination a {
   color: #505050; }
 .ui-toolkit .pagination > .active > a {
