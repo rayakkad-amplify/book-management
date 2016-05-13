@@ -2,6 +2,13 @@
   padding: 0; }
 .ui-toolkit .breadcrumb-col {
   padding: 0; }
+.ui-toolkit .dataTables_wrapper {
+  margin-top: 20px; }
+.ui-toolkit .pagination a {
+  color: #505050; }
+.ui-toolkit .pagination > .active > a {
+  background-color: #505050;
+  border-color: #505050; }
 .ui-toolkit .nav-tabs {
   margin-bottom: 0; }
 .ui-toolkit #trc-details {
@@ -41,28 +48,25 @@
   table-layout: auto; }
   .ui-toolkit .table td {
     font-size: 12px; }
-  .ui-toolkit .table#trc-results-summary thead tr > th.dark-cell {
-    background: #505050; }
-    .ui-toolkit .table#trc-results-summary thead tr > th.dark-cell#trc-student-result {
-      font-family: "open-sans-bold", Arial, sans-serif; }
-  .ui-toolkit .table#trc-passage-details tr > td {
-    font-family: "open-sans-semi-bold", Arial, sans-serif; }
-    .ui-toolkit .table#trc-passage-details tr > td span {
-      float: right;
-      font-family: "open-sans-semi-regular", Arial, sans-serif; }
-  .ui-toolkit .table#trc-accordion-row-table {
-    margin: 0 0 40px 0; }
-    .ui-toolkit .table#trc-accordion-row-table h4 {
-      padding-bottom: 5px; }
-    .ui-toolkit .table#trc-accordion-row-table .rationale-list {
-      padding-left: 0; }
-      .ui-toolkit .table#trc-accordion-row-table .rationale-list li {
-        font-weight: bold;
-        list-style: none; }
-        .ui-toolkit .table#trc-accordion-row-table .rationale-list li .glyphicon {
-          margin-right: 10px; }
-        .ui-toolkit .table#trc-accordion-row-table .rationale-list li p {
-          font-weight: normal;
-          padding: 10px 0 20px 0; }
+  .ui-toolkit .table.dataTable thead .sorting:after,
+  .ui-toolkit .table.dataTable thead .sorting_desc:after,
+  .ui-toolkit .table.dataTable thead .sorting_asc:after {
+    font-family: 'glyphicons-halflings-regular';
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 1;
+    opacity: 0.2;
+    speak: none;
+    text-transform: none;
+    top: 10px;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased; }
+  .ui-toolkit .table.dataTable thead .sorting:after {
+    content: "\e150"; }
+  .ui-toolkit .table.dataTable thead .sorting_desc:after {
+    content: "\e156"; }
+  .ui-toolkit .table.dataTable thead .sorting_asc:after {
+    content: "\e155"; }
 
 /*# sourceMappingURL=book-management.css.map */
