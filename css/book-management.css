@@ -1,14 +1,46 @@
+.ui-toolkit .container {
+  padding: 0; }
+.ui-toolkit .breadcrumb-col {
+  padding: 0; }
 .ui-toolkit .nav-tabs {
   margin-bottom: 0; }
 .ui-toolkit #trc-details {
   border-left: 1px solid #eee;
   border-right: 1px solid #eee; }
 .ui-toolkit .page-title {
-  border-bottom: 1px solid #eee; }
+  border-bottom: 1px solid #eee;
+  position: relative; }
+  .ui-toolkit .page-title .btn {
+    right: 14px;
+    position: absolute;
+    top: 20px; }
 .ui-toolkit #student-name {
   float: right; }
+.ui-toolkit .filters-container {
+  margin-top: 10px;
+  border: 1px solid #ddd; }
+  .ui-toolkit .filters-container .filters-title {
+    background-color: #f0f0f0;
+    height: 37px;
+    margin: 0;
+    line-height: 37px;
+    padding-left: 10px;
+    font-family: "open-sans-semi-bold", Arial, sans-serif; }
+  .ui-toolkit .filters-container .filters-content {
+    padding: 10px 10px 20px 10px; }
+.ui-toolkit .filter-options {
+  display: inline-block;
+  margin-right: 20px; }
+.ui-toolkit .dropdown-label {
+  font-family: "open-sans-semi-bold", Arial, sans-serif;
+  font-size: 10px;
+  margin: 0 0 2px;
+  padding-left: 10px; }
 .ui-toolkit .table {
-  margin: 20px 0 40px 0; }
+  margin: 20px 0 40px 0;
+  table-layout: auto; }
+  .ui-toolkit .table td {
+    font-size: 12px; }
   .ui-toolkit .table#trc-results-summary thead tr > th.dark-cell {
     background: #505050; }
     .ui-toolkit .table#trc-results-summary thead tr > th.dark-cell#trc-student-result {
@@ -32,3 +64,5 @@
         .ui-toolkit .table#trc-accordion-row-table .rationale-list li p {
           font-weight: normal;
           padding: 10px 0 20px 0; }
+
+/*# sourceMappingURL=book-management.css.map */

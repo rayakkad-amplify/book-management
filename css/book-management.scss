@@ -1,4 +1,12 @@
 .ui-toolkit {
+    .container {
+        padding: 0
+    }
+
+    .breadcrumb-col {
+        padding: 0;
+    }
+
     .nav-tabs {
         margin-bottom: 0;
     }
@@ -10,14 +18,56 @@
 
     .page-title {
         border-bottom: 1px solid #eee;
+        position: relative;
+
+        .btn {
+            right: 14px;
+            position: absolute;
+            top: 20px;
+        }
     }
 
     #student-name {
         float: right;
     }
 
+    .filters-container {
+        margin-top: 10px;
+        border: 1px solid #ddd;
+
+        .filters-title {
+            background-color: #f0f0f0;
+            height: 37px;
+            margin: 0;
+            line-height: 37px;
+            padding-left: 10px;
+            font-family: "open-sans-semi-bold", Arial, sans-serif;
+        }
+        
+        .filters-content {
+            padding: 10px 10px 20px 10px
+        }
+    }
+
+    .filter-options {
+        display: inline-block;
+        margin-right: 20px;
+    }
+
+    .dropdown-label {
+        font-family: "open-sans-semi-bold", Arial, sans-serif;
+        font-size: 10px;
+        margin: 0 0 2px;
+        padding-left: 10px;
+    }
+
     .table {
         margin: 20px 0 40px 0;
+        table-layout: auto;
+
+        td {
+            font-size: 12px;
+        }
 
         &#trc-results-summary {
             thead { 

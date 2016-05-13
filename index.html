@@ -1,0 +1,304 @@
+<!doctype html>
+<html class="ui-toolkit" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Book Management</title>
+    <link rel="stylesheet" href="public/css/styles.css">
+    <link rel="stylesheet" href="css/book-management.css">
+</head>
+<body>
+    <!-- Top Navigation -->
+    <div role="navigation" class="navbar navbar-default navbar-static-top">
+        <div class="navbar-header"><a href="../" class="navbar-brand"><span class="view-title">Amplify</span></a>
+            <ul class="nav navbar-nav navbar-right navbar-primary-collapsed">
+                <li>
+                    <a href="#" role="button" data-toggle="collapse" data-target=".navbar-main" class="icon icon-menu">
+                        <div>Menu</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-logout">
+                        <div>Log Out</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="navbar-main navbar-collapse collapse navbar-responsive-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="active">
+                    <a href="#" class="icon icon-home"><div>Home</div></a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-notices">
+                        <span class="badge notice-counter">3</span>
+                        <div>Notices</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-admin"><div>Admin</div></a>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-groups"><div>Classes</div></a>
+                </li>
+                <li id="my-books">
+                    <a href="#" class="icon icon-books"><div>My Books</div></a>
+                </li>
+                <li id="school-books">
+                    <a href="#" class="icon icon-books"><div>School Books</div></a>
+                </li>
+                <li class="dropdown visible-md visible-lg">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle icon icon-books">
+                        <span class="icon icon-dropdown-arrow"></span>
+                        <div>Books</div>
+                    </a>
+                    <ul class="dropdown-menu menu-basic">
+                        <li><a href="#">My Books</a></li>
+                        <li><a href="#">School Books</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="icon icon-support"><div>Support</div></a>
+                </li>
+                <li id="user-name" class="user-command">
+                    <a href="#" class="icon icon-profile"><div>Alexandria</div></a>
+                </li>
+                <li id="user-logout" class="user-command hidden-xs hidden-sm">
+                    <a href="#" class="icon icon-logout"><div>Log Out</div></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- TRC Details Content -->
+    <div class="container" id="trc-details">
+        <!-- Header Title -->
+        <div class="col-md-12 page-title">
+            <h3>My Book List</h3>
+            <!-- Primary button -->
+            <a href="edit-books.html" class="btn btn-primary">Edit Book List</a>
+        </div>
+
+        <div class="col-md-12">
+            <div class="filters-container">
+                <h5 class="filters-title">Book Filters</h5>
+                <div class="filters-content">
+                    <div class="filter-options">
+                        <!-- dropdown with scroll -->
+                        <p class="dropdown-label">District</p>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-dropdown-basic fixed-width dropdown-toggle" data-toggle="dropdown" data-value="Value 0">
+                                <span class="btn-dropdown-label">District</span>
+                                <span class="icon icon-dropdown-arrow"></span>
+                            </button>
+                            <ul class="dropdown-menu menu-basic">
+                                <li><a href="#/" data-value="Value 1">Item 1</a></li>
+                                <li><a href="#/" data-value="Value 2">Item 2</a></li>
+                                <li><a href="#/" data-value="Value 3">Item 3</a></li>
+                                <li><a href="#/" class="ellipsis" data-value="Value 4">Item 4 - Long text with ellipsis in case it overflows</a></li>
+                                <li><a href="#/" data-value="Value 5">Item 5</a></li>
+                                <li><a href="#/" data-value="Value 6">Item 6</a></li>
+                                <li><a href="#/" data-value="Value 7">Item 7</a></li>
+                                <li><a href="#/" data-value="Value 8">Item 8</a></li>
+                                <li><a href="#/" data-value="Value 9">Item 9</a></li>
+                                <li><a href="#/" data-value="Value 10">Item 10</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                        
+                    <div class="filter-options">
+                        <!-- dropdown with scroll -->
+                        <p class="dropdown-label">School</p>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-dropdown-basic fixed-width dropdown-toggle" data-toggle="dropdown" data-value="Value 0">
+                                <span class="btn-dropdown-label">School</span>
+                                <span class="icon icon-dropdown-arrow"></span>
+                            </button>
+                            <ul class="dropdown-menu menu-basic">
+                                <li><a href="#/" data-value="Value 1">Item 1</a></li>
+                                <li><a href="#/" data-value="Value 2">Item 2</a></li>
+                                <li><a href="#/" data-value="Value 3">Item 3</a></li>
+                                <li><a href="#/" class="ellipsis" data-value="Value 4">Item 4 - Long text with ellipsis in case it overflows</a></li>
+                                <li><a href="#/" data-value="Value 5">Item 5</a></li>
+                                <li><a href="#/" data-value="Value 6">Item 6</a></li>
+                                <li><a href="#/" data-value="Value 7">Item 7</a></li>
+                                <li><a href="#/" data-value="Value 8">Item 8</a></li>
+                                <li><a href="#/" data-value="Value 9">Item 9</a></li>
+                                <li><a href="#/" data-value="Value 10">Item 10</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                        
+                    <div class="filter-options">
+                        <!-- dropdown with scroll -->
+                        <p class="dropdown-label">Level System</p>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-dropdown-basic fixed-width dropdown-toggle" data-toggle="dropdown" data-value="Value 0">
+                                <span class="btn-dropdown-label">Guided Reading</span>
+                                <span class="icon icon-dropdown-arrow"></span>
+                            </button>
+                            <ul class="dropdown-menu menu-basic">
+                                <li><a href="#/" data-value="Value 1">Guided Reading</a></li>
+                                <li><a href="#/" data-value="Value 2">Reading Recovery</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Tertiary button -->
+                    <button type="button" class="btn btn-tertiary">Filter Results</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-12">
+            <!-- Basic table with stripes -->
+            <table class="table table-striped" id="basic-table-striped" width="100%">
+                <thead>
+                    <tr>
+                        <th class="text-left">Level</th>
+                        <th class="text-left">Title</th>
+                        <th class="text-left">Publisher</th>
+                        <th class="text-left">Series</th>
+                        <th class="text-center">Language</th>
+                        <th class="text-center">Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                        <td class="text-left">Sundance</td>
+                        <td class="text-left">StoryTown</td>
+                        <td class="text-center">English</td>
+                        <td class="text-center">Non-Fiction</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                        <td class="text-left">Sundance</td>
+                        <td class="text-left">StoryTown</td>
+                        <td class="text-center">English</td>
+                        <td class="text-center">Non-Fiction</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                        <td class="text-left">Sundance</td>
+                        <td class="text-left">StoryTown</td>
+                        <td class="text-center">English</td>
+                        <td class="text-center">Non-Fiction</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                        <td class="text-left">Sundance</td>
+                        <td class="text-left">StoryTown</td>
+                        <td class="text-center">English</td>
+                        <td class="text-center">Non-Fiction</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                        <td class="text-left">Sundance</td>
+                        <td class="text-left">StoryTown</td>
+                        <td class="text-center">English</td>
+                        <td class="text-center">Non-Fiction</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                        <td class="text-left">Sundance</td>
+                        <td class="text-left">StoryTown</td>
+                        <td class="text-center">English</td>
+                        <td class="text-center">Non-Fiction</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                        <td class="text-left">Sundance</td>
+                        <td class="text-left">StoryTown</td>
+                        <td class="text-center">English</td>
+                        <td class="text-center">Non-Fiction</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                        <td class="text-left">Sundance</td>
+                        <td class="text-left">StoryTown</td>
+                        <td class="text-center">English</td>
+                        <td class="text-center">Non-Fiction</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                        <td class="text-left">Sundance</td>
+                        <td class="text-left">StoryTown</td>
+                        <td class="text-center">English</td>
+                        <td class="text-center">Non-Fiction</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                        <td class="text-left">Sundance</td>
+                        <td class="text-left">StoryTown</td>
+                        <td class="text-center">English</td>
+                        <td class="text-center">Non-Fiction</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                        <td class="text-left">Sundance</td>
+                        <td class="text-left">StoryTown</td>
+                        <td class="text-center">English</td>
+                        <td class="text-center">Non-Fiction</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                        <td class="text-left">Sundance</td>
+                        <td class="text-left">StoryTown</td>
+                        <td class="text-center">English</td>
+                        <td class="text-center">Non-Fiction</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                        <td class="text-left">Sundance</td>
+                        <td class="text-left">StoryTown</td>
+                        <td class="text-center">English</td>
+                        <td class="text-center">Non-Fiction</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                        <td class="text-left">Sundance</td>
+                        <td class="text-left">StoryTown</td>
+                        <td class="text-center">English</td>
+                        <td class="text-center">Non-Fiction</td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+
+    </div> <!-- container -->
+    
+    <!-- Footer -->
+    <div class="footer footer-static footer-inverse" role="contentinfo">
+        <span>© 2014 – 2015 Amplify Education, Inc. All rights reserved.</span>
+    </div>
+    <script src="public/js/vendor/jquery/jquery.js"></script>
+    <script src="public/js/vendor/d3/d3.min.js" charset="UTF-8"></script>
+    <script src="public/js/vendor/bootstrap/modal.js"></script>
+    <script src="public/js/vendor/bootstrap/transition.js"></script>
+    <script src="public/js/vendor/bootstrap/collapse.js"></script>
+    <script src="public/js/vendor/bootstrap/dropdown.js"></script>
+    <script src="public/js/vendor/bootstrap/tooltip.js"></script>
+    <script src="public/js/amplify/amplify-notes-widget.js"></script>
+    <script src="public/js/amplify/amplify-utilities.js"></script>
+    <script src="public/js/amplify/amplify-performance-bar.js"></script>
+    <script src="public/js/amplify/amplify-accordion-table-rows.js"></script>
+    <script src="public/js/amplify/amplify-dropdown.js"></script>
+    <script src="public/js/book-management/book-management.js"></script>
+</body>
+</html>
