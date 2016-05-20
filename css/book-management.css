@@ -23,6 +23,16 @@
     top: 20px; }
 .ui-toolkit #student-name {
   float: right; }
+.ui-toolkit .list-information {
+  margin: 20px 20px 0; }
+  .ui-toolkit .list-information .btn {
+    float: right;
+    margin-left: 20px; }
+  .ui-toolkit .list-information .books-info {
+    display: inline-block;
+    font-family: "open-sans-semi-bold", Arial, sans-serif;
+    line-height: 30px;
+    padding-right: 30px; }
 .ui-toolkit .filters-container {
   margin-top: 10px;
   border: 1px solid #ddd; }
