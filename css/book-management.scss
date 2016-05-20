@@ -9,6 +9,23 @@
 
     .dataTables_wrapper {
         margin: 20px 0;
+    
+        .dataTables_length,
+        .dataTables_info,
+        .dataTables_filter {
+            display: inline-block;
+        }
+
+        .dataTables_length
+        {
+            margin-right: 25px; 
+        }
+
+        .dataTables_filter {
+            float: right;
+            top: 5px;
+            position: relative;
+        }
     }
 
     .pagination {
@@ -26,7 +43,7 @@
         margin-bottom: 0;
     }
 
-    #trc-details {
+    #book-management {
         border-left: 1px solid #eee;
         border-right: 1px solid #eee;
     }
@@ -64,8 +81,10 @@
     }
 
     .filters-container {
-        margin-top: 10px;
-        border: 1px solid #ddd;
+        background-color: #ddd;
+        padding-top: 10px;
+        // margin-top: 10px;
+        // border: 1px solid #ddd;
 
         .filters-title {
             background-color: #f0f0f0;

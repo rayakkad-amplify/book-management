@@ -4,6 +4,16 @@
   padding: 0; }
 .ui-toolkit .dataTables_wrapper {
   margin: 20px 0; }
+  .ui-toolkit .dataTables_wrapper .dataTables_length,
+  .ui-toolkit .dataTables_wrapper .dataTables_info,
+  .ui-toolkit .dataTables_wrapper .dataTables_filter {
+    display: inline-block; }
+  .ui-toolkit .dataTables_wrapper .dataTables_length {
+    margin-right: 25px; }
+  .ui-toolkit .dataTables_wrapper .dataTables_filter {
+    float: right;
+    top: 5px;
+    position: relative; }
 .ui-toolkit .pagination a {
   color: #505050; }
 .ui-toolkit .pagination > .active > a {
@@ -11,7 +21,7 @@
   border-color: #505050; }
 .ui-toolkit .nav-tabs {
   margin-bottom: 0; }
-.ui-toolkit #trc-details {
+.ui-toolkit #book-management {
   border-left: 1px solid #eee;
   border-right: 1px solid #eee; }
 .ui-toolkit .page-title {
@@ -35,8 +45,8 @@
     margin: 0;
     padding-right: 25px; }
 .ui-toolkit .filters-container {
-  margin-top: 10px;
-  border: 1px solid #ddd; }
+  background-color: #ddd;
+  padding-top: 10px; }
   .ui-toolkit .filters-container .filters-title {
     background-color: #f0f0f0;
     height: 37px;
