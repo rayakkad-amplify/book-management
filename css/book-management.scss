@@ -47,7 +47,7 @@
     }
 
     .list-information {
-        margin: 20px 20px 0;
+        margin: 30px 20px 0;
 
         .btn {
             float: right;
@@ -58,7 +58,8 @@
             display: inline-block;
             font-family: "open-sans-semi-bold", Arial, sans-serif;
             line-height: 30px;
-            padding-right: 30px;
+            margin: 0;
+            padding-right: 25px;
         }
     }
 
@@ -77,6 +78,12 @@
         
         .filters-content {
             padding: 10px 10px 20px 10px
+        }
+    }
+
+    .tab-content {
+        .filters-container {
+            margin-top: 0;
         }
     }
 
@@ -113,7 +120,7 @@
                     opacity: 0.2;
                     speak: none;
                     text-transform: none;
-                    top: 10px;
+                    top: 14px;
                     -moz-osx-font-smoothing: grayscale;
                     -webkit-font-smoothing: antialiased;
                 }

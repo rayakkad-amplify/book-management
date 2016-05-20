@@ -9,6 +9,25 @@
     <link rel="stylesheet" href="css/book-management.css">
 </head>
 <body>
+    <!-- Modal -->
+    <div class="modal fade amplify-modal modal-sm" id="mySmallModal" tabindex="-1" role="dialog" aria-labelledby="notesLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="icon icon-close" data-dismiss="modal" aria-hidden="true"></span>
+                    <h4 class="modal-title">Modal - Small</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+                <div class="divider-partial"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Top Navigation -->
     <div role="navigation" class="navbar navbar-default navbar-static-top">
         <div class="navbar-header"><a href="../" class="navbar-brand"><span class="view-title">Amplify</span></a>
@@ -98,16 +117,16 @@
                 <div class="tab-pane fade active in" id="personal-list">
                     <div class="col-md-12">
                         <div class="list-information">
-                            <p class="books-info">Total personal books: 7</p>
-                            <p class="books-info">Total mClass books: 1280</p>
+                            <p class="books-info">Personal Books: 7</p>
+                            <p class="books-info">mClass Books: 1280</p>
                             
-                            <a href="edit-books.html" class="btn btn-primary pull right">Save Books</a>
-                            <a href="edit-books.html" class="btn btn-secondary pull right">Cancel</a>
+                            <a href="edit-books.html" class="btn btn-primary pull right" data-toggle="modal" data-target="#mySmallModal">Save Books</a>
+                            <a href="index.html" class="btn btn-secondary pull right">Cancel</a>
                         </div>
                     </div>
                     <div class="col-md-12">
                         <div class="filters-container">
-                            <h5 class="filters-title">Filters</h5>
+                            <!-- <h5 class="filters-title">Filters</h5> -->
                             <div class="filters-content">
                                 <div class="filter-options">
                                     <!-- dropdown with scroll -->
@@ -206,7 +225,7 @@
 
                     <div class="col-md-12">
                         <!-- Basic table with stripes -->
-                        <table class="table table-striped table-bordered" id="book-results-table" width="100%">
+                        <table class="table table-striped table-bordered" id="personal-list-table" width="100%">
                             <thead>
                                 <tr>
                                     <th class="text-center no-sort">
@@ -384,12 +403,596 @@
                     </div>
 
                 </div> <!-- Tab - Personal List -->
+                
+                <!-- Tab - School List -->
                 <div class="tab-pane fade" id="school-list">
-                    
-                </div>
+                    <div class="col-md-12">
+                        <div class="list-information">
+                            <p class="books-info">School Books: 7</p>
+                            <p class="books-info">mClass Books: 1280</p>
+                            <p class="books-info">
+                                <input id="checkbox-12" class="regular-checkbox" type="checkbox">
+                                        <label for="checkbox-12">
+                                            <span class="icon icon-checkbox"></span>Lock Teachers' List
+                                        </label>
+                            </p>
+                            <p class="books-info">
+                                <input id="checkbox-12" class="regular-checkbox" type="checkbox">
+                                        <label for="checkbox-12">
+                                            <span class="icon icon-checkbox"></span>Use District List
+                                        </label>
+                            </p>
+                            <a href="edit-books.html" class="btn btn-primary pull right" data-toggle="modal" data-target="#mySmallModal">Save Books</a>
+                            <a href="index.html" class="btn btn-secondary pull right">Cancel</a>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="filters-container">
+                            <!-- <h5 class="filters-title">Filters</h5> -->
+                            <div class="filters-content">
+                                <div class="filter-options">
+                                    <!-- dropdown with scroll -->
+                                    <p class="dropdown-label">View By</p>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-dropdown-basic fixed-width dropdown-toggle" data-toggle="dropdown" data-value="Value 0">
+                                            <span class="btn-dropdown-label">Books</span>
+                                            <span class="icon icon-dropdown-arrow"></span>
+                                        </button>
+                                        <ul class="dropdown-menu menu-basic">
+                                            <li><a href="#/" data-value="Value 1">Books</a></li>
+                                            <li><a href="#/" data-value="Value 2">Kits</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <hr>
+
+                                <div class="filter-options">
+                                    <!-- dropdown with scroll -->
+                                    <p class="dropdown-label">Level</p>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-dropdown-basic dropdown-toggle" data-toggle="dropdown" data-value="Value 0">
+                                            <span class="btn-dropdown-label">Lorem Ipsum</span>
+                                            <span class="icon icon-dropdown-arrow"></span>
+                                        </button>
+                                        <ul class="dropdown-menu menu-basic">
+                                            <li><a href="#/" data-value="Value 1">Lorem Ipsum</a></li>
+                                            <li><a href="#/" data-value="Value 2">Lorem Ipsum</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="filter-options">
+                                    <!-- dropdown with scroll -->
+                                    <p class="dropdown-label">Publisher</p>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-dropdown-basic dropdown-toggle" data-toggle="dropdown" data-value="Value 0">
+                                            <span class="btn-dropdown-label">Lorem Ipsum</span>
+                                            <span class="icon icon-dropdown-arrow"></span>
+                                        </button>
+                                        <ul class="dropdown-menu menu-basic">
+                                            <li><a href="#/" data-value="Value 1">Lorem Ipsum</a></li>
+                                            <li><a href="#/" data-value="Value 2">Lorem Ipsum</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="filter-options">
+                                    <!-- dropdown with scroll -->
+                                    <p class="dropdown-label">Series</p>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-dropdown-basic dropdown-toggle" data-toggle="dropdown" data-value="Value 0">
+                                            <span class="btn-dropdown-label">Lorem Ipsum</span>
+                                            <span class="icon icon-dropdown-arrow"></span>
+                                        </button>
+                                        <ul class="dropdown-menu menu-basic">
+                                            <li><a href="#/" data-value="Value 1">Lorem Ipsum</a></li>
+                                            <li><a href="#/" data-value="Value 2">Lorem Ipsum</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="filter-options">
+                                    <!-- dropdown with scroll -->
+                                    <p class="dropdown-label">Language</p>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-dropdown-basic dropdown-toggle" data-toggle="dropdown" data-value="Value 0">
+                                            <span class="btn-dropdown-label">Lorem Ipsum</span>
+                                            <span class="icon icon-dropdown-arrow"></span>
+                                        </button>
+                                        <ul class="dropdown-menu menu-basic">
+                                            <li><a href="#/" data-value="Value 1">Lorem Ipsum</a></li>
+                                            <li><a href="#/" data-value="Value 2">Lorem Ipsum</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="filter-options">
+                                    <!-- dropdown with scroll -->
+                                    <p class="dropdown-label">Type</p>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-dropdown-basic dropdown-toggle" data-toggle="dropdown" data-value="Value 0">
+                                            <span class="btn-dropdown-label">Lorem Ipsum</span>
+                                            <span class="icon icon-dropdown-arrow"></span>
+                                        </button>
+                                        <ul class="dropdown-menu menu-basic">
+                                            <li><a href="#/" data-value="Value 1">Lorem Ipsum</a></li>
+                                            <li><a href="#/" data-value="Value 2">Lorem Ipsum</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <!-- Basic table with stripes -->
+                        <table class="table table-striped table-bordered" id="school-list-table" width="100%">
+                            <thead>
+                                <tr>
+                                    <th class="text-center no-sort">
+                                        <input id="checkbox-12" class="regular-checkbox" type="checkbox">
+                                        <label for="checkbox-12">
+                                            <span class="icon icon-checkbox"></span>
+                                        </label>
+                                    </th>
+                                    <th class="text-center">Level</th>
+                                    <th class="text-left">Title</th>
+                                    <th class="text-left">Publisher</th>
+                                    <th class="text-left">Series</th>
+                                    <th class="text-center">Language</th>
+                                    <th class="text-center">Type</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-center">
+                                        <input id="checkbox-1" class="regular-checkbox" type="checkbox" checked="">
+                                        <label for="checkbox-1">
+                                            <span class="icon icon-checkbox"></span>
+                                        </label>
+                                    </td>
+                                    <td class="text-center">1</td>
+                                    <td>Three Blind Mice</td>
+                                    <td class="text-left">Sundance</td>
+                                    <td class="text-left">StoryTown</td>
+                                    <td class="text-center">English</td>
+                                    <td class="text-center">Non-Fiction</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">
+                                        <input id="checkbox-2" class="regular-checkbox" type="checkbox">
+                                        <label for="checkbox-2">
+                                            <span class="icon icon-checkbox"></span>
+                                        </label>
+                                    </td>
+                                    <td class="text-center">1</td>
+                                    <td>Hanna Has A Pet</td>
+                                    <td class="text-left">Sundance</td>
+                                    <td class="text-left">StoryTown</td>
+                                    <td class="text-center">English</td>
+                                    <td class="text-center">Non-Fiction</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">
+                                        <input id="checkbox-3" class="regular-checkbox" type="checkbox">
+                                        <label for="checkbox-3">
+                                            <span class="icon icon-checkbox"></span>
+                                        </label>
+                                    </td>
+                                    <td class="text-center">1</td>
+                                    <td>Fritty Frattzy Foo</td>
+                                    <td class="text-left">Sundance</td>
+                                    <td class="text-left">StoryTown</td>
+                                    <td class="text-center">English</td>
+                                    <td class="text-center">Non-Fiction</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">
+                                        <input id="checkbox-4" class="regular-checkbox" type="checkbox">
+                                        <label for="checkbox-4">
+                                            <span class="icon icon-checkbox"></span>
+                                        </label>
+                                    </td>
+                                    <td class="text-center">1</td>
+                                    <td>Nice Mice</td>
+                                    <td class="text-left">Sundance</td>
+                                    <td class="text-left">StoryTown</td>
+                                    <td class="text-center">English</td>
+                                    <td class="text-center">Non-Fiction</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">
+                                        <input id="checkbox-5" class="regular-checkbox" type="checkbox">
+                                        <label for="checkbox-5">
+                                            <span class="icon icon-checkbox"></span>
+                                        </label>
+                                    </td>
+                                    <td class="text-center">1</td>
+                                    <td>Jane Goodhall</td>
+                                    <td class="text-left">Sundance</td>
+                                    <td class="text-left">StoryTown</td>
+                                    <td class="text-center">English</td>
+                                    <td class="text-center">Non-Fiction</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">
+                                        <input id="checkbox-6" class="regular-checkbox" type="checkbox">
+                                        <label for="checkbox-6">
+                                            <span class="icon icon-checkbox"></span>
+                                        </label>
+                                    </td>
+                                    <td class="text-center">1</td>
+                                    <td>We Go To The Zoo</td>
+                                    <td class="text-left">Sundance</td>
+                                    <td class="text-left">StoryTown</td>
+                                    <td class="text-center">English</td>
+                                    <td class="text-center">Non-Fiction</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">
+                                        <input id="checkbox-7" class="regular-checkbox" type="checkbox">
+                                        <label for="checkbox-7">
+                                            <span class="icon icon-checkbox"></span>
+                                        </label>
+                                    </td>
+                                    <td class="text-center">1</td>
+                                    <td>Seasons</td>
+                                    <td class="text-left">Sundance</td>
+                                    <td class="text-left">StoryTown</td>
+                                    <td class="text-center">English</td>
+                                    <td class="text-center">Non-Fiction</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">
+                                        <input id="checkbox-8" class="regular-checkbox" type="checkbox">
+                                        <label for="checkbox-8">
+                                            <span class="icon icon-checkbox"></span>
+                                        </label>
+                                    </td>
+                                    <td class="text-center">1</td>
+                                    <td>Celebrating America</td>
+                                    <td class="text-left">Sundance</td>
+                                    <td class="text-left">StoryTown</td>
+                                    <td class="text-center">English</td>
+                                    <td class="text-center">Non-Fiction</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">
+                                        <input id="checkbox-9" class="regular-checkbox" type="checkbox">
+                                        <label for="checkbox-9">
+                                            <span class="icon icon-checkbox"></span>
+                                        </label>
+                                    </td>
+                                    <td class="text-center">1</td>
+                                    <td>The Life Of Abraham Linclon</td>
+                                    <td class="text-left">Sundance</td>
+                                    <td class="text-left">StoryTown</td>
+                                    <td class="text-center">English</td>
+                                    <td class="text-center">Non-Fiction</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">
+                                        <input id="checkbox-10" class="regular-checkbox" type="checkbox">
+                                        <label for="checkbox-10">
+                                            <span class="icon icon-checkbox"></span>
+                                        </label>
+                                    </td>
+                                    <td class="text-center">1</td>
+                                    <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                                    <td class="text-left">Sundance</td>
+                                    <td class="text-left">StoryTown</td>
+                                    <td class="text-center">English</td>
+                                    <td class="text-center">Non-Fiction</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">
+                                        <input id="checkbox-11" class="regular-checkbox" type="checkbox">
+                                        <label for="checkbox-11">
+                                            <span class="icon icon-checkbox"></span>
+                                        </label>
+                                    </td>
+                                    <td class="text-center">1</td>
+                                    <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                                    <td class="text-left">Sundance</td>
+                                    <td class="text-left">StoryTown</td>
+                                    <td class="text-center">English</td>
+                                    <td class="text-center">Non-Fiction</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div> <!-- Tab - School List -->
+
+
                 <div class="tab-pane fade" id="district-list">
-                    
-                </div>
+                    <div class="col-md-12">
+                        <div class="list-information">
+                            <p class="books-info">District Books: 700</p>
+                            <p class="books-info">mClass Books: 1280</p>
+                            <a href="edit-books.html" class="btn btn-primary pull right" data-toggle="modal" data-target="#mySmallModal">Save Books</a>
+                            <a href="index.html" class="btn btn-secondary pull right">Cancel</a>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="filters-container">
+                            <!-- <h5 class="filters-title">Filters</h5> -->
+                            <div class="filters-content">
+                                <div class="filter-options">
+                                    <!-- dropdown with scroll -->
+                                    <p class="dropdown-label">View By</p>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-dropdown-basic fixed-width dropdown-toggle" data-toggle="dropdown" data-value="Value 0">
+                                            <span class="btn-dropdown-label">Books</span>
+                                            <span class="icon icon-dropdown-arrow"></span>
+                                        </button>
+                                        <ul class="dropdown-menu menu-basic">
+                                            <li><a href="#/" data-value="Value 1">Books</a></li>
+                                            <li><a href="#/" data-value="Value 2">Kits</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <hr>
+
+                                <div class="filter-options">
+                                    <!-- dropdown with scroll -->
+                                    <p class="dropdown-label">Level</p>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-dropdown-basic dropdown-toggle" data-toggle="dropdown" data-value="Value 0">
+                                            <span class="btn-dropdown-label">Lorem Ipsum</span>
+                                            <span class="icon icon-dropdown-arrow"></span>
+                                        </button>
+                                        <ul class="dropdown-menu menu-basic">
+                                            <li><a href="#/" data-value="Value 1">Lorem Ipsum</a></li>
+                                            <li><a href="#/" data-value="Value 2">Lorem Ipsum</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="filter-options">
+                                    <!-- dropdown with scroll -->
+                                    <p class="dropdown-label">Publisher</p>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-dropdown-basic dropdown-toggle" data-toggle="dropdown" data-value="Value 0">
+                                            <span class="btn-dropdown-label">Lorem Ipsum</span>
+                                            <span class="icon icon-dropdown-arrow"></span>
+                                        </button>
+                                        <ul class="dropdown-menu menu-basic">
+                                            <li><a href="#/" data-value="Value 1">Lorem Ipsum</a></li>
+                                            <li><a href="#/" data-value="Value 2">Lorem Ipsum</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="filter-options">
+                                    <!-- dropdown with scroll -->
+                                    <p class="dropdown-label">Series</p>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-dropdown-basic dropdown-toggle" data-toggle="dropdown" data-value="Value 0">
+                                            <span class="btn-dropdown-label">Lorem Ipsum</span>
+                                            <span class="icon icon-dropdown-arrow"></span>
+                                        </button>
+                                        <ul class="dropdown-menu menu-basic">
+                                            <li><a href="#/" data-value="Value 1">Lorem Ipsum</a></li>
+                                            <li><a href="#/" data-value="Value 2">Lorem Ipsum</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="filter-options">
+                                    <!-- dropdown with scroll -->
+                                    <p class="dropdown-label">Language</p>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-dropdown-basic dropdown-toggle" data-toggle="dropdown" data-value="Value 0">
+                                            <span class="btn-dropdown-label">Lorem Ipsum</span>
+                                            <span class="icon icon-dropdown-arrow"></span>
+                                        </button>
+                                        <ul class="dropdown-menu menu-basic">
+                                            <li><a href="#/" data-value="Value 1">Lorem Ipsum</a></li>
+                                            <li><a href="#/" data-value="Value 2">Lorem Ipsum</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="filter-options">
+                                    <!-- dropdown with scroll -->
+                                    <p class="dropdown-label">Type</p>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-dropdown-basic dropdown-toggle" data-toggle="dropdown" data-value="Value 0">
+                                            <span class="btn-dropdown-label">Lorem Ipsum</span>
+                                            <span class="icon icon-dropdown-arrow"></span>
+                                        </button>
+                                        <ul class="dropdown-menu menu-basic">
+                                            <li><a href="#/" data-value="Value 1">Lorem Ipsum</a></li>
+                                            <li><a href="#/" data-value="Value 2">Lorem Ipsum</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <!-- Basic table with stripes -->
+                        <table class="table table-striped table-bordered" id="district-list-table" width="100%">
+                            <thead>
+                                <tr>
+                                    <th class="text-center no-sort">
+                                        <input id="checkbox-12" class="regular-checkbox" type="checkbox">
+                                        <label for="checkbox-12">
+                                            <span class="icon icon-checkbox"></span>
+                                        </label>
+                                    </th>
+                                    <th class="text-center">Level</th>
+                                    <th class="text-left">Title</th>
+                                    <th class="text-left">Publisher</th>
+                                    <th class="text-left">Series</th>
+                                    <th class="text-center">Language</th>
+                                    <th class="text-center">Type</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-center">
+                                        <input id="checkbox-1" class="regular-checkbox" type="checkbox" checked="">
+                                        <label for="checkbox-1">
+                                            <span class="icon icon-checkbox"></span>
+                                        </label>
+                                    </td>
+                                    <td class="text-center">1</td>
+                                    <td>Three Blind Mice</td>
+                                    <td class="text-left">Sundance</td>
+                                    <td class="text-left">StoryTown</td>
+                                    <td class="text-center">English</td>
+                                    <td class="text-center">Non-Fiction</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">
+                                        <input id="checkbox-2" class="regular-checkbox" type="checkbox">
+                                        <label for="checkbox-2">
+                                            <span class="icon icon-checkbox"></span>
+                                        </label>
+                                    </td>
+                                    <td class="text-center">1</td>
+                                    <td>Hanna Has A Pet</td>
+                                    <td class="text-left">Sundance</td>
+                                    <td class="text-left">StoryTown</td>
+                                    <td class="text-center">English</td>
+                                    <td class="text-center">Non-Fiction</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">
+                                        <input id="checkbox-3" class="regular-checkbox" type="checkbox">
+                                        <label for="checkbox-3">
+                                            <span class="icon icon-checkbox"></span>
+                                        </label>
+                                    </td>
+                                    <td class="text-center">1</td>
+                                    <td>Fritty Frattzy Foo</td>
+                                    <td class="text-left">Sundance</td>
+                                    <td class="text-left">StoryTown</td>
+                                    <td class="text-center">English</td>
+                                    <td class="text-center">Non-Fiction</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">
+                                        <input id="checkbox-4" class="regular-checkbox" type="checkbox">
+                                        <label for="checkbox-4">
+                                            <span class="icon icon-checkbox"></span>
+                                        </label>
+                                    </td>
+                                    <td class="text-center">1</td>
+                                    <td>Nice Mice</td>
+                                    <td class="text-left">Sundance</td>
+                                    <td class="text-left">StoryTown</td>
+                                    <td class="text-center">English</td>
+                                    <td class="text-center">Non-Fiction</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">
+                                        <input id="checkbox-5" class="regular-checkbox" type="checkbox">
+                                        <label for="checkbox-5">
+                                            <span class="icon icon-checkbox"></span>
+                                        </label>
+                                    </td>
+                                    <td class="text-center">1</td>
+                                    <td>Jane Goodhall</td>
+                                    <td class="text-left">Sundance</td>
+                                    <td class="text-left">StoryTown</td>
+                                    <td class="text-center">English</td>
+                                    <td class="text-center">Non-Fiction</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">
+                                        <input id="checkbox-6" class="regular-checkbox" type="checkbox">
+                                        <label for="checkbox-6">
+                                            <span class="icon icon-checkbox"></span>
+                                        </label>
+                                    </td>
+                                    <td class="text-center">1</td>
+                                    <td>We Go To The Zoo</td>
+                                    <td class="text-left">Sundance</td>
+                                    <td class="text-left">StoryTown</td>
+                                    <td class="text-center">English</td>
+                                    <td class="text-center">Non-Fiction</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">
+                                        <input id="checkbox-7" class="regular-checkbox" type="checkbox">
+                                        <label for="checkbox-7">
+                                            <span class="icon icon-checkbox"></span>
+                                        </label>
+                                    </td>
+                                    <td class="text-center">1</td>
+                                    <td>Seasons</td>
+                                    <td class="text-left">Sundance</td>
+                                    <td class="text-left">StoryTown</td>
+                                    <td class="text-center">English</td>
+                                    <td class="text-center">Non-Fiction</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">
+                                        <input id="checkbox-8" class="regular-checkbox" type="checkbox">
+                                        <label for="checkbox-8">
+                                            <span class="icon icon-checkbox"></span>
+                                        </label>
+                                    </td>
+                                    <td class="text-center">1</td>
+                                    <td>Celebrating America</td>
+                                    <td class="text-left">Sundance</td>
+                                    <td class="text-left">StoryTown</td>
+                                    <td class="text-center">English</td>
+                                    <td class="text-center">Non-Fiction</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">
+                                        <input id="checkbox-9" class="regular-checkbox" type="checkbox">
+                                        <label for="checkbox-9">
+                                            <span class="icon icon-checkbox"></span>
+                                        </label>
+                                    </td>
+                                    <td class="text-center">1</td>
+                                    <td>The Life Of Abraham Linclon</td>
+                                    <td class="text-left">Sundance</td>
+                                    <td class="text-left">StoryTown</td>
+                                    <td class="text-center">English</td>
+                                    <td class="text-center">Non-Fiction</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">
+                                        <input id="checkbox-10" class="regular-checkbox" type="checkbox">
+                                        <label for="checkbox-10">
+                                            <span class="icon icon-checkbox"></span>
+                                        </label>
+                                    </td>
+                                    <td class="text-center">1</td>
+                                    <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                                    <td class="text-left">Sundance</td>
+                                    <td class="text-left">StoryTown</td>
+                                    <td class="text-center">English</td>
+                                    <td class="text-center">Non-Fiction</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">
+                                        <input id="checkbox-11" class="regular-checkbox" type="checkbox">
+                                        <label for="checkbox-11">
+                                            <span class="icon icon-checkbox"></span>
+                                        </label>
+                                    </td>
+                                    <td class="text-center">1</td>
+                                    <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                                    <td class="text-left">Sundance</td>
+                                    <td class="text-left">StoryTown</td>
+                                    <td class="text-center">English</td>
+                                    <td class="text-center">Non-Fiction</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div> <!-- Tab - District List -->
             </div>
         </div>
         

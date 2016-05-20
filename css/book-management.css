@@ -24,7 +24,7 @@
 .ui-toolkit #student-name {
   float: right; }
 .ui-toolkit .list-information {
-  margin: 20px 20px 0; }
+  margin: 30px 20px 0; }
   .ui-toolkit .list-information .btn {
     float: right;
     margin-left: 20px; }
@@ -32,7 +32,8 @@
     display: inline-block;
     font-family: "open-sans-semi-bold", Arial, sans-serif;
     line-height: 30px;
-    padding-right: 30px; }
+    margin: 0;
+    padding-right: 25px; }
 .ui-toolkit .filters-container {
   margin-top: 10px;
   border: 1px solid #ddd; }
@@ -45,6 +46,8 @@
     font-family: "open-sans-semi-bold", Arial, sans-serif; }
   .ui-toolkit .filters-container .filters-content {
     padding: 10px 10px 20px 10px; }
+.ui-toolkit .tab-content .filters-container {
+  margin-top: 0; }
 .ui-toolkit .filter-options {
   display: inline-block;
   margin-right: 20px; }
@@ -69,7 +72,7 @@
     opacity: 0.2;
     speak: none;
     text-transform: none;
-    top: 10px;
+    top: 14px;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased; }
   .ui-toolkit .table.dataTable thead .sorting:after {
